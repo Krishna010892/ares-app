@@ -1,1 +1,9 @@
 node_modules
+# Conda installers
+*.sh
+
+# Conda / Python
+miniconda*
+anaconda*
+venv/
+__pycache__/
