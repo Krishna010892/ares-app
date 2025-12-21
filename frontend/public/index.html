@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>HELLO FROM THE FRONTEND</p>
+    <p>%=data%</p>
+
+    <h2>Fetch Backend Data</h2>
+<button onclick="loadData()">Fetch Data</button>
+
+<p id="result"></p>
+
+<script>
+function loadData() {
+    fetch('http://localhost:8000/api/data')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('result').innerText = data.message;
+        })
+        .catch(err => console.log(err));
+}
+</script>
+    <!-- <h2>Names from Backend</h2>
+<button onclick="fetchData()">Fetch Data</button>
+
+<ul id="output"></ul>
+
+<script>
+function fetchData() {
+    fetch("http://127.0.0.1:8000/api")
+        .then(response => response.json())
+        .then(result => {
+            const ul = document.getElementById("output");
+            ul.innerHTML = "";
+
+            result.data.forEach(name => {
+                const li = document.createElement("li");
+                li.textContent = name;
+                ul.appendChild(li);
+            });
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+}
+</script> -->
+
+</body>
+<style>
+    body{
+        background-color: aqua;
+        color: blueviolet;
+
+    }
+</style>
+</html>
