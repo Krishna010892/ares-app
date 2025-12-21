@@ -14,4 +14,4 @@ anaconda*
 *.sh
 venv/
 __pycache__/
-    
+    frontend/Miniconda3-latest-Linux-x86_64.sh
